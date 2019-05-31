@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>MwST Rechner</title>
+</head>
+<body>
+
+<form id="mwstForm" th:action="@{/api/rest/mwst}" th:method="GET">
+
+    <h1>MwST-Rechner</h1>
+    <p>Geben Sie einen Betrag an.</p>
+
+    <table>
+        <tr>
+            <td>Betrag</td>
+            <td><input id="betrag" name="betrag" type="text" maxlength="10"></td>
+        </tr>
+    </table>
+<input type="submit" value="Berechne MwST" />
+
+</form>
+
+</body>
+</html>
