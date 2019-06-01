@@ -20,9 +20,6 @@ import java.util.List;
 @SpringBootApplication
 public class MwstRechnerApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(MwstRechnerApplication.class, args);
-	}
 
 	@Autowired
 	private DiscoveryClient discoveryClient;
@@ -32,6 +29,10 @@ public class MwstRechnerApplication {
 	public List<ServiceInstance> serviceInstancesByApplicationName(
 			@PathVariable String applicationName) {
 		return this.discoveryClient.getInstances(applicationName);
+	}
+
+	public static void main(String[] args) {
+		SpringApplication.run(MwstRechnerApplication.class, args);
 	}
 
 }
