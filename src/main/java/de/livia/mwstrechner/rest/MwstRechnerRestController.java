@@ -19,7 +19,7 @@ public class MwstRechnerRestController {
      * @return VAT
      */
     @RequestMapping(value = "/mwst")
-    public double berechneMwst(@RequestParam(name = "betrag", required = true) double betrag) {
-        return betrag * 0.19;
+    public Double berechneMwst(@RequestParam(name = "betrag", required = true) double betrag) {
+        return Double.valueOf(betrag * 0.19);
     }
 }
