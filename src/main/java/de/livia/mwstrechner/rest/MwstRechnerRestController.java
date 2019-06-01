@@ -15,11 +15,11 @@ public class MwstRechnerRestController {
 
     /**
      * Calculates the VAT (MwST) of a value entered by the user
-     * @param betrag value
+     * @param value value
      * @return VAT
      */
     @RequestMapping(value = "/mwst")
-    public Double berechneMwst(@RequestParam(name = "value", required = true) double betrag) {
-        return Double.valueOf(betrag * 0.19);
+    public Double berechneMwst(@RequestParam(name = "value", required = true) double value) {
+        return Double.valueOf(value * 0.19);
     }
 }
